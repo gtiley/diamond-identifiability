@@ -14,7 +14,9 @@ git clone https://github.com/gtiley/diamond-identifiability.git
 module load M2-1.14
 ```
 
-## `ndown-nright.m2`
+## Comparisons of networks with 8 taxa
+
+### `ndown-nright.m2`
 
 ```shell
 screen -S ndown-nright
@@ -27,7 +29,7 @@ cat ndown-nright.m2 | M2 &> ndown-nright_out.txt
 Started 10/3 1030am.
 
 
-## `ndown-nleft.m2`
+### `ndown-nleft.m2`
 
 ```shell
 screen -S ndown-nleft
@@ -39,7 +41,7 @@ cat ndown-nleft.m2 | M2 &> ndown-nleft_out.txt
 ```
 Started 10/3 1035am.
 
-## `ndown-nup.m2`
+### `ndown-nup.m2`
 
 ```shell
 screen -S ndown-nup
@@ -51,7 +53,7 @@ cat ndown-nup.m2 | M2 &> ndown-nup_out.txt
 ```
 Started 10/3 1035am.
 
-## `nright-nleft.m2`
+### `nright-nleft.m2`
 
 ```shell
 screen -S nright-nleft
@@ -63,7 +65,7 @@ cat nright-nleft.m2 | M2 &> nright-nleft_out.txt
 ```
 Started 10/3 1037am.
 
-## `nright-nup.m2`
+### `nright-nup.m2`
 
 ```shell
 screen -S nright-nup
@@ -75,7 +77,7 @@ cat nright-nup.m2 | M2 &> nright-nup_out.txt
 ```
 Started 10/3 1037am.
 
-## `nleft-nup.m2`    
+### `nleft-nup.m2`    
 
 ```shell
 screen -S nleft-nup
@@ -86,6 +88,22 @@ cd diamond-identifiability/scripts/macaulay2
 cat nleft-nup.m2 | M2 &> nleft-nup_out.txt
 ```
 Started 10/3 1040am.
+
+## Comparisons of networks with 7 taxa
+
+### `ndown-nright.m2`
+
+```shell
+screen -S ndown-nright
+```
+
+```shell
+cd diamond-identifiability/scripts/macaulay2
+cat ndown-nright.m2 | M2 &> ndown-nright_out.txt
+```
+Started 10/3 1030am.
+
+
 
 # Polynomial equations for all networks
 
