@@ -1,3 +1,40 @@
+# Testing macaulay2 locally
+
+1. [Download M2](http://www2.macaulay2.com/Macaulay2/Downloads/)
+```
+brew install Macaulay2/tap/M2
+```
+
+# Jobs in WID server
+```shell
+ssh csolislemus@solislemus-001.discovery.wisc.edu
+cd /mnt/dv/wid/projects4/Solis-Lemus-phylo-invariants/claudia
+git clone https://github.com/gtiley/diamond-identifiability.git
+module load M2-1.14
+```
+
+## `ndown-nright.m2`
+
+```shell
+screen -S ndown-nright
+```
+
+```shell
+cd diamond-identifiability/scripts/macaulay2
+cat ndown-nright.m2 | M2 &> ndown-nright_out.txt
+```
+
+
+
+
+ndown-nleft.m2  
+ndown-nup.m2    
+nright-nleft.m2 
+nright-nup.m2
+nleft-nup.m2    
+
+# Polynomial equations for all networks
+
 We have the polynomial equations from overleaf in the format for Macaulay2
 Note that we keep just one equation per quartet (a minor one), except for the (1,1,1,1) quartet
 for which we keep the 1st two equations.
@@ -8,7 +45,7 @@ We change the variables (in overleaf they are all z's):
 - N_left: v
 - N_up: w
 
-# N_down (z)
+## N_down (z)
 
 z2*z23*z3
 z23*z2
@@ -31,7 +68,7 @@ z3*z13*z1
 (1 − gz)*(3 − 2*z13) + gz*z23
 (1 - gz)*z13 + gz*(3-2*z23)
 
-# N_right (u)
+## N_right (u)
 
 (1 − gu)^2*u2*u0*u01*u13*u23 + 2*gu*(1 − gu)*u2*u0 + gu^2*u2*u0*u02
 (1 − gu)^2*u0*u13*u01 + gu*(1 − gu)*u0*(3-u23) + gu^2*u0*u02
@@ -54,7 +91,7 @@ u3*u13*u1
 (1 − gu)*u01 + gu*(3 − 2*u13)
 (1 − gu)*(3 −2*u01) + gu*u13
 
-# N_left (v)
+## N_left (v)
 
 v3*v13*v1
 (1 − gv)*v13*v3 + gv*v3
@@ -77,7 +114,7 @@ v2*v23*v13*v1
 (1 − gv)*v23 + gv*(3 − 2*v02)
 (1 − gv)*(3-2*v23) + gv*v02
 
-# N_up (w)
+## N_up (w)
 
 (1 − gw)^2*w1*w0*w01 + 2*gw*(1 − gw)*w1*w0 + gw^2*w1*w0*w02*w23*w13
 (1 − gw)*w1 + gw*w23*w13*w1

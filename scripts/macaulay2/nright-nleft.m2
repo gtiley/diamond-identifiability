@@ -8,27 +8,26 @@
 
 R = QQ[gu, u0, u02, u2, u23, u3, u13, u1, u01, gv, v0, v02, v2, v23, v3, v13, v1, v01]
 
-I = ideal(
-(1 − gu)^2*u2*u0*u01*u13*u23 + 2*gu*(1 − gu)*u2*u0 + gu^2*u2*u0*u02 - v3*v13*v1
-(1 − gu)^2*u0*u13*u01 + gu*(1 − gu)*u0*(3-u23) + gu^2*u0*u02 - (1 − gv)*v13*v3 - gv*v3
-(1 − gu)*u23*u2 + gu*u2 - (1 − gv)* v1 - gv*v13*v1
-(1 − gu)^2*u3*u0*u13*u01 + 2*gu*(1 − gu)*u3*u0 + gu^2*u3*u0*u23*u02 - (1 − gv)^2*v3*v0*v13*v01 - 2*gv*(1 − gv)*v3*v0 - gv^2*v3*v0*v23*v02
-(1 − gu)*u3 + gu*u23*u3 - (1 − gv)^2*v0*v01 - gv*(1 − gv)*v0*(3-v13) - gv^2*v0*v02*v23
-u2*u23*u3 - (1 − gv)^2*v1*v0*v01 - 2*gv*(1 − gv)*v1*v0 - gv^2*v1*v0*v02*v23*v13
-(1 − gu)^2*u0*u01 + gu*(1 − gu)*u0*(3-u23*u13) + gu^2*u0*u02 - v3
-(1 − gu)*u13*u23*u2 + gu*u2 - v13*v1
-(1 − gu)^2*u0*u01 + gu*(1 − gu)*u0*(3-u13) + gu^2*u0*u02*u23 - (1 − gv)*v3 - gv*v23*v3
-u23*u2 - (1 − gv)*v1 - gv*v23*v13*v1
-(1 − gu)*u13*u3 + gu*u3 - (1 − gv)^2*v0*v13*v01 - gv*(1 − gv)*v0*(3-v23) - gv^2*v0*v02
-u3 - (1 − gv)^2*v0*v01 - gv*(1 − gv)*v0*(3-v23*v13) - gv^2*v0*v02
-(1 − gu)^2*u1*u0*u01 + 2*gu*(1 − gu)*u1*u0 + gu^2*u1*u0*u02*u23*u13 - v2*v23*v3
-(1 − gu)*u1 + gu*u23*u13*u1 - v23*v2
-u2*u23*u13*u1 - v2*v23*v13*v1
-(1 − gu)*u1 + gu*u13*u1 - (1 − gv)*v23*v2 - gv*v2
-u13*u1 - (1 − gv)*v13*v23*v2 - gv*v2
-u3*u13*u1 - (1 − gv)^2*v2*v0*v01*v13*v23 - 2*gv*(1 − gv)*v2*v0 - gv^2*v2*v0*v02
-(1 − gu)*u01 + gu*(3 − 2*u13) - (1 − gv)*v23 - gv*(3 − 2*v02)
-(1 − gu)*(3 −2*u01) + gu*u13 - (1 − gv)*(3-2*v23) - gv*v02)
+I = ideal((1 - gu)^2*u2*u0*u01*u13*u23 + 2*gu*(1 - gu)*u2*u0 + gu^2*u2*u0*u02 - v3*v13*v1,
+(1 - gu)^2*u0*u13*u01 + gu*(1 - gu)*u0*(3-u23) + gu^2*u0*u02 - (1 - gv)*v13*v3 - gv*v3,
+(1 - gu)*u23*u2 + gu*u2 - (1 - gv)* v1 - gv*v13*v1,
+(1 - gu)^2*u3*u0*u13*u01 + 2*gu*(1 - gu)*u3*u0 + gu^2*u3*u0*u23*u02 - (1 - gv)^2*v3*v0*v13*v01 - 2*gv*(1 - gv)*v3*v0 - gv^2*v3*v0*v23*v02,
+(1 - gu)*u3 + gu*u23*u3 - (1 - gv)^2*v0*v01 - gv*(1 - gv)*v0*(3-v13) - gv^2*v0*v02*v23,
+u2*u23*u3 - (1 - gv)^2*v1*v0*v01 - 2*gv*(1 - gv)*v1*v0 - gv^2*v1*v0*v02*v23*v13,
+(1 - gu)^2*u0*u01 + gu*(1 - gu)*u0*(3-u23*u13) + gu^2*u0*u02 - v3,
+(1 - gu)*u13*u23*u2 + gu*u2 - v13*v1,
+(1 - gu)^2*u0*u01 + gu*(1 - gu)*u0*(3-u13) + gu^2*u0*u02*u23 - (1 - gv)*v3 - gv*v23*v3,
+u23*u2 - (1 - gv)*v1 - gv*v23*v13*v1,
+(1 - gu)*u13*u3 + gu*u3 - (1 - gv)^2*v0*v13*v01 - gv*(1 - gv)*v0*(3-v23) - gv^2*v0*v02,
+u3 - (1 - gv)^2*v0*v01 - gv*(1 - gv)*v0*(3-v23*v13) - gv^2*v0*v02,
+(1 - gu)^2*u1*u0*u01 + 2*gu*(1 - gu)*u1*u0 + gu^2*u1*u0*u02*u23*u13 - v2*v23*v3,
+(1 - gu)*u1 + gu*u23*u13*u1 - v23*v2,
+u2*u23*u13*u1 - v2*v23*v13*v1,
+(1 - gu)*u1 + gu*u13*u1 - (1 - gv)*v23*v2 - gv*v2,
+u13*u1 - (1 - gv)*v13*v23*v2 - gv*v2,
+u3*u13*u1 - (1 - gv)^2*v2*v0*v01*v13*v23 - 2*gv*(1 - gv)*v2*v0 - gv^2*v2*v0*v02,
+(1 - gu)*u01 + gu*(3 - 2*u13) - (1 - gv)*v23 - gv*(3 - 2*v02),
+(1 - gu)*(3 -2*u01) + gu*u13 - (1 - gv)*(3-2*v23) - gv*v02)
 
 G = eliminate(I,{gv, v0, v02, v2, v23, v3, v13, v1, v01})
 
