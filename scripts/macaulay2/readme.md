@@ -4,6 +4,7 @@
 ```
 brew install Macaulay2/tap/M2
 ```
+2. I opened M2 and tested `ndown-nright.m2` line by line. I discovered that the minus symbols copied from latex were slightly different from `-`. So had to change them all.
 
 # Jobs in WID server
 ```shell
@@ -23,15 +24,68 @@ screen -S ndown-nright
 cd diamond-identifiability/scripts/macaulay2
 cat ndown-nright.m2 | M2 &> ndown-nright_out.txt
 ```
+Started 10/3 1030am.
 
 
+## `ndown-nleft.m2`
 
+```shell
+screen -S ndown-nleft
+```
 
-ndown-nleft.m2  
-ndown-nup.m2    
-nright-nleft.m2 
-nright-nup.m2
-nleft-nup.m2    
+```shell
+cd diamond-identifiability/scripts/macaulay2
+cat ndown-nleft.m2 | M2 &> ndown-nleft_out.txt
+```
+Started 10/3 1035am.
+
+## `ndown-nup.m2`
+
+```shell
+screen -S ndown-nup
+```
+
+```shell
+cd diamond-identifiability/scripts/macaulay2
+cat ndown-nup.m2 | M2 &> ndown-nup_out.txt
+```
+Started 10/3 1035am.
+
+## `nright-nleft.m2`
+
+```shell
+screen -S nright-nleft
+```
+
+```shell
+cd diamond-identifiability/scripts/macaulay2
+cat nright-nleft.m2 | M2 &> nright-nleft_out.txt
+```
+Started 10/3 1037am.
+
+## `nright-nup.m2`
+
+```shell
+screen -S nright-nup
+```
+
+```shell
+cd diamond-identifiability/scripts/macaulay2
+cat nright-nup.m2 | M2 &> nright-nup_out.txt
+```
+Started 10/3 1037am.
+
+## `nleft-nup.m2`    
+
+```shell
+screen -S nleft-nup
+```
+
+```shell
+cd diamond-identifiability/scripts/macaulay2
+cat nleft-nup.m2 | M2 &> nleft-nup_out.txt
+```
+Started 10/3 1040am.
 
 # Polynomial equations for all networks
 
