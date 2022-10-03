@@ -91,18 +91,77 @@ Started 10/3 1040am.
 
 ## Comparisons of networks with 7 taxa
 
-### `ndown-nright.m2`
+### `ndown-nright-7.m2`
 
 ```shell
-screen -S ndown-nright
+screen -S ndown-nright-7
 ```
 
 ```shell
 cd diamond-identifiability/scripts/macaulay2
-cat ndown-nright.m2 | M2 &> ndown-nright_out.txt
+cat ndown-nright-7.m2 | M2 &> ndown-nright-7_out.txt
 ```
-Started 10/3 1030am.
+Started 10/3 1pm.
 
+### `ndown-nleft-7.m2`
+
+```shell
+screen -S ndown-nleft-7
+```
+
+```shell
+cd diamond-identifiability/scripts/macaulay2
+cat ndown-nleft-7.m2 | M2 &> ndown-nleft-7_out.txt
+```
+Started 10/3 1pm.
+
+### `ndown-nup-7.m2`
+
+```shell
+screen -S ndown-nup-7
+```
+
+```shell
+cd diamond-identifiability/scripts/macaulay2
+cat ndown-nup-7.m2 | M2 &> ndown-nup-7_out.txt
+```
+Started 10/3 104pm.
+
+### `nright-nleft-7.m2`
+
+```shell
+screen -S nright-nleft-7
+```
+
+```shell
+cd diamond-identifiability/scripts/macaulay2
+cat nright-nleft-7.m2 | M2 &> nright-nleft-7_out.txt
+```
+Started 10/3 105pm.
+
+### `nright-nup-7.m2`
+
+```shell
+screen -S nright-nup-7
+```
+
+```shell
+cd diamond-identifiability/scripts/macaulay2
+cat nright-nup-7.m2 | M2 &> nright-nup-7_out.txt
+```
+Started 10/3 111pm.
+
+### `nleft-nup-7.m2`    
+
+```shell
+screen -S nleft-nup-7
+```
+
+```shell
+cd diamond-identifiability/scripts/macaulay2
+cat nleft-nup-7.m2 | M2 &> nleft-nup-7_out.txt
+```
+Started 10/3 112pm.
 
 
 # Polynomial equations for all networks
