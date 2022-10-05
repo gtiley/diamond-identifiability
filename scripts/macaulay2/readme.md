@@ -26,7 +26,8 @@ screen -S ndown-nright
 cd diamond-identifiability/scripts/macaulay2
 cat ndown-nright.m2 | M2 &> ndown-nright_out.txt
 ```
-Started 10/3 1030am.
+Started 10/3 1030am. Error at 1:46pm `mmap(PROT_NONE) failed` and `Aborted (core dumped)`.
+Started again 10/5 1047am.
 
 
 ### `ndown-nleft.m2`
@@ -39,7 +40,7 @@ screen -S ndown-nleft
 cd diamond-identifiability/scripts/macaulay2
 cat ndown-nleft.m2 | M2 &> ndown-nleft_out.txt
 ```
-Started 10/3 1035am.
+Started 10/3 1035am. Still running 10/5 1048am.
 
 ### `ndown-nup.m2`
 
@@ -51,7 +52,8 @@ screen -S ndown-nup
 cd diamond-identifiability/scripts/macaulay2
 cat ndown-nup.m2 | M2 &> ndown-nup_out.txt
 ```
-Started 10/3 1035am.
+Started 10/3 1035am. Error `mmap(PROT_NONE) failed` at 15:21 and `Aborted (core dumped)`.
+Started again 10/5 1049am.
 
 ### `nright-nleft.m2`
 
@@ -63,7 +65,8 @@ screen -S nright-nleft
 cd diamond-identifiability/scripts/macaulay2
 cat nright-nleft.m2 | M2 &> nright-nleft_out.txt
 ```
-Started 10/3 1037am.
+Started 10/3 1037am. Error `mmap(PROT_NONE) failed` at 14:05 and `Aborted (core dumped)`.
+Started again 10/5 1051am.
 
 ### `nright-nup.m2`
 
@@ -75,7 +78,8 @@ screen -S nright-nup
 cd diamond-identifiability/scripts/macaulay2
 cat nright-nup.m2 | M2 &> nright-nup_out.txt
 ```
-Started 10/3 1037am.
+Started 10/3 1037am. Error `mmap(PROT_NONE) failed` at 17:26 and `Aborted (core dumped)`.
+Started again 10/5 1052am.
 
 ### `nleft-nup.m2`    
 
@@ -87,7 +91,8 @@ screen -S nleft-nup
 cd diamond-identifiability/scripts/macaulay2
 cat nleft-nup.m2 | M2 &> nleft-nup_out.txt
 ```
-Started 10/3 1040am.
+Started 10/3 1040am. Error `mmap(PROT_NONE) failed` at 17:44 and `Aborted (core dumped)`.
+Started again 10/5 1053am.
 
 ## Comparisons of networks with 7 taxa
 
@@ -101,7 +106,7 @@ screen -S ndown-nright-7
 cd diamond-identifiability/scripts/macaulay2
 cat ndown-nright-7.m2 | M2 &> ndown-nright-7_out.txt
 ```
-Started 10/3 1pm.
+Started 10/3 1pm. Finished 14:10.
 
 ### `ndown-nleft-7.m2`
 
@@ -113,7 +118,7 @@ screen -S ndown-nleft-7
 cd diamond-identifiability/scripts/macaulay2
 cat ndown-nleft-7.m2 | M2 &> ndown-nleft-7_out.txt
 ```
-Started 10/3 1pm.
+Started 10/3 1pm. Finished at 13:52.
 
 ### `ndown-nup-7.m2`
 
@@ -125,7 +130,7 @@ screen -S ndown-nup-7
 cd diamond-identifiability/scripts/macaulay2
 cat ndown-nup-7.m2 | M2 &> ndown-nup-7_out.txt
 ```
-Started 10/3 104pm.
+Started 10/3 104pm. Finished 20:29.
 
 ### `nright-nleft-7.m2`
 
@@ -137,7 +142,8 @@ screen -S nright-nleft-7
 cd diamond-identifiability/scripts/macaulay2
 cat nright-nleft-7.m2 | M2 &> nright-nleft-7_out.txt
 ```
-Started 10/3 105pm.
+Started 10/3 105pm. Error `mmap(PROT_NONE) failed` at 21:11 and `Aborted (core dumped)`.
+Started again 10/5 1058am.
 
 ### `nright-nup-7.m2`
 
@@ -149,7 +155,8 @@ screen -S nright-nup-7
 cd diamond-identifiability/scripts/macaulay2
 cat nright-nup-7.m2 | M2 &> nright-nup-7_out.txt
 ```
-Started 10/3 111pm.
+Started 10/3 111pm. Error `mmap(PROT_NONE) failed` at 17:55 and `Aborted (core dumped)`.
+Started again 10/5 1100am.
 
 ### `nleft-nup-7.m2`    
 
@@ -161,7 +168,8 @@ screen -S nleft-nup-7
 cd diamond-identifiability/scripts/macaulay2
 cat nleft-nup-7.m2 | M2 &> nleft-nup-7_out.txt
 ```
-Started 10/3 112pm.
+Started 10/3 112pm. Error `mmap(PROT_NONE) failed` at 21:08 and `Aborted (core dumped)`.
+Started again 10/5 1101am.
 
 
 # Polynomial equations for all networks
