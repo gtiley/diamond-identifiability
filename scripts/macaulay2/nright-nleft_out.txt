@@ -1,0 +1,48 @@
+Macaulay2, version 1.14
+--loading configuration for package "FourTiTwo" from file /mnt/ws/home/csolislemus/.Macaulay2/init-FourTiTwo.m2
+--loading configuration for package "Topcom" from file /mnt/ws/home/csolislemus/.Macaulay2/init-Topcom.m2
+with packages: ConwayPolynomials, Elimination, IntegralClosure, InverseSystems, LLLBases, PrimaryDecomposition, ReesAlgebra, TangentCone, Truncations
+
+i1 : --------------------------------------------------------
+     -- Topology identifiability N_right vs N_left         --
+     --------------------------------------------------------
+     -- To run in console: cat nright-nleft.m2 | M2 &> nright-nleft_out.txt
+     -- we call u's the variables on N_right, and v's the variables in N_left
+     -- gu: gamma for N_right; gv: gamma for N_left
+     -- Note that we only include one (or 2) equation per quartet (as all three CF sum up to 1)
+     
+     R = QQ[gu, u0, u02, u2, u23, u3, u13, u1, u01, gv, v0, v02, v2, v23, v3, v13, v1, v01]
+
+o1 = R
+
+o1 : PolynomialRing
+
+i2 : 
+     I = ideal((1 - gu)^2*u2*u0*u01*u13*u23 + 2*gu*(1 - gu)*u2*u0 + gu^2*u2*u0*u02 - v3*v13*v1,
+     (1 - gu)^2*u0*u13*u01 + gu*(1 - gu)*u0*(3-u23) + gu^2*u0*u02 - (1 - gv)*v13*v3 - gv*v3,
+     (1 - gu)*u23*u2 + gu*u2 - (1 - gv)* v1 - gv*v13*v1,
+     (1 - gu)^2*u3*u0*u13*u01 + 2*gu*(1 - gu)*u3*u0 + gu^2*u3*u0*u23*u02 - (1 - gv)^2*v3*v0*v13*v01 - 2*gv*(1 - gv)*v3*v0 - gv^2*v3*v0*v23*v02,
+     (1 - gu)*u3 + gu*u23*u3 - (1 - gv)^2*v0*v01 - gv*(1 - gv)*v0*(3-v13) - gv^2*v0*v02*v23,
+     u2*u23*u3 - (1 - gv)^2*v1*v0*v01 - 2*gv*(1 - gv)*v1*v0 - gv^2*v1*v0*v02*v23*v13,
+     (1 - gu)^2*u0*u01 + gu*(1 - gu)*u0*(3-u23*u13) + gu^2*u0*u02 - v3,
+     (1 - gu)*u13*u23*u2 + gu*u2 - v13*v1,
+     (1 - gu)^2*u0*u01 + gu*(1 - gu)*u0*(3-u13) + gu^2*u0*u02*u23 - (1 - gv)*v3 - gv*v23*v3,
+     u23*u2 - (1 - gv)*v1 - gv*v23*v13*v1,
+     (1 - gu)*u13*u3 + gu*u3 - (1 - gv)^2*v0*v13*v01 - gv*(1 - gv)*v0*(3-v23) - gv^2*v0*v02,
+     u3 - (1 - gv)^2*v0*v01 - gv*(1 - gv)*v0*(3-v23*v13) - gv^2*v0*v02,
+     (1 - gu)^2*u1*u0*u01 + 2*gu*(1 - gu)*u1*u0 + gu^2*u1*u0*u02*u23*u13 - v2*v23*v3,
+     (1 - gu)*u1 + gu*u23*u13*u1 - v23*v2,
+     u2*u23*u13*u1 - v2*v23*v13*v1,
+     (1 - gu)*u1 + gu*u13*u1 - (1 - gv)*v23*v2 - gv*v2,
+     u13*u1 - (1 - gv)*v13*v23*v2 - gv*v2,
+     u3*u13*u1 - (1 - gv)^2*v2*v0*v01*v13*v23 - 2*gv*(1 - gv)*v2*v0 - gv^2*v2*v0*v02,
+     (1 - gu)*u01 + gu*(3 - 2*u13) - (1 - gv)*v23 - gv*(3 - 2*v02),
+     (1 - gu)*(3 -2*u01) + gu*u13 - (1 - gv)*(3-2*v23) - gv*v02)
+
+              2                                              2                                   2                                 2               2           2                             2                                                                                                                            2                  2                  2                  2                                                           2                           2                                                   2               2           2                        2                                                                2                      2               2                                                             2               2                           2            2                                                                                         2               2           2            2                                                                                                                   2               2           2                                         2                                                           2               2                           2            2                                          2                      2               2                                                                                                                                                                                                                                     2                                              2                                   2
+o2 = ideal (gu u0*u2*u23*u13*u01 - 2gu*u0*u2*u23*u13*u01 + gu u0*u02*u2 + u0*u2*u23*u13*u01 - 2gu u0*u2 + 2gu*u0*u2 - v3*v13*v1, gu u0*u13*u01 + gu u0*u02 + gu u0*u23 - 2gu*u0*u13*u01 - 3gu u0 - gu*u0*u23 + u0*u13*u01 + gv*v3*v13 + 3gu*u0 - gv*v3 - v3*v13, - gu*u2*u23 - gv*v13*v1 + gu*u2 + u2*u23 + gv*v1 - v1, gu u0*u02*u23*u3 + gu u0*u3*u13*u01 - gv v0*v02*v23*v3 - gv v0*v3*v13*v01 - 2gu*u0*u3*u13*u01 + 2gv*v0*v3*v13*v01 - 2gu u0*u3 + u0*u3*u13*u01 + 2gv v0*v3 - v0*v3*v13*v01 + 2gu*u0*u3 - 2gv*v0*v3, - gv v0*v02*v23 - gv v0*v13 - gv v0*v01 + gu*u23*u3 + 3gv v0 + gv*v0*v13 + 2gv*v0*v01 - gu*u3 - 3gv*v0 - v0*v01 + u3, - gv v0*v02*v23*v13*v1 - gv v0*v1*v01 + 2gv v0*v1 + 2gv*v0*v1*v01 + u2*u23*u3 - 2gv*v0*v1 - v0*v1*v01, gu u0*u23*u13 + gu u0*u02 - gu*u0*u23*u13 + gu u0*u01 - 3gu u0 - 2gu*u0*u01 + 3gu*u0 + u0*u01 - v3, - gu*u2*u23*u13 + u2*u23*u13 + gu*u2 - v13*v1, gu u0*u02*u23 + gu u0*u13 + gu u0*u01 - 3gu u0 - gu*u0*u13 - 2gu*u0*u01 - gv*v23*v3 + 3gu*u0 + u0*u01 + gv*v3 - v3, - gv*v23*v13*v1 + u2*u23 + gv*v1 - v1, - gv v0*v13*v01 - gv v0*v02 - gv v0*v23 + 2gv*v0*v13*v01 - gu*u3*u13 + 3gv v0 + gv*v0*v23 - v0*v13*v01 + gu*u3 + u3*u13 - 3gv*v0, - gv v0*v23*v13 - gv v0*v02 + gv*v0*v23*v13 - gv v0*v01 + 3gv v0 + 2gv*v0*v01 - 3gv*v0 - v0*v01 + u3, gu u0*u02*u23*u13*u1 + gu u0*u1*u01 - 2gu u0*u1 - 2gu*u0*u1*u01 + 2gu*u0*u1 + u0*u1*u01 - v2*v23*v3, gu*u23*u13*u1 - gu*u1 - v2*v23 + u1, u2*u23*u13*u1 - v2*v23*v13*v1, gu*u13*u1 + gv*v2*v23 - gu*u1 - gv*v2 - v2*v23 + u1, gv*v2*v23*v13 - v2*v23*v13 + u13*u1 - gv*v2, - gv v0*v2*v23*v13*v01 + 2gv*v0*v2*v23*v13*v01 - gv v0*v02*v2 - v0*v2*v23*v13*v01 + 2gv v0*v2 + u3*u13*u1 - 2gv*v0*v2, - 2gu*u13 - gu*u01 + 2gv*v02 + gv*v23 + 3gu + u01 - 3gv - v23, gu*u13 + 2gu*u01 - gv*v02 - 2gv*v23 - 3gu - 2u01 + 3gv + 2v23)
+
+o2 : Ideal of R
+
+i3 : 
+     G = eliminate(I,{gv, v0, v02, v2, v23, v3, v13, v1, v01})

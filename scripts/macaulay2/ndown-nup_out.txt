@@ -1,0 +1,49 @@
+Macaulay2, version 1.14
+--loading configuration for package "FourTiTwo" from file /mnt/ws/home/csolislemus/.Macaulay2/init-FourTiTwo.m2
+--loading configuration for package "Topcom" from file /mnt/ws/home/csolislemus/.Macaulay2/init-Topcom.m2
+with packages: ConwayPolynomials, Elimination, IntegralClosure, InverseSystems, LLLBases, PrimaryDecomposition, ReesAlgebra, TangentCone, Truncations
+
+i1 : --------------------------------------------------------
+     -- Topology identifiability N_down vs N_up         --
+     --------------------------------------------------------
+     -- To run in console: cat ndown-nup.m2 | M2 &> ndown-nup_out.txt
+     -- we call z's the variables on N_down, and w's the variables in N_up
+     -- gz: gamma for N_down; gw: gamma for N_up
+     -- Note that we only include one (or 2) equation per quartet (as all three CF sum up to 1)
+     
+     R = QQ[gz, z0, z02, z2, z23, z3, z13, z1, z01, gw, w0, w02, w2, w23, w3, w13, w1, w01]
+
+o1 = R
+
+o1 : PolynomialRing
+
+i2 : 
+     I = ideal(z2*z23*z3 - (1 - gw)^2*w1*w0*w01 - 2*gw*(1 - gw)*w1*w0 - gw^2*w1*w0*w02*w23*w13,
+     z23*z2 - (1 - gw)*w1 - gw*w23*w13*w1,
+     z3 - (1 - gw)^2*w0*w01 - gw*(1 - gw)*w0*(3-w23*w13) - gw^2*w0*w02,
+     z2*z23*z13*z1 - w2*w23*w13*w1,
+     z13*z1 - (1 - gw)*w13*w23*w2 - gw*w2,
+     z3*z13*z1 - (1 - gw)^2*w2*w0*w01*w13*w23 - 2*gw*(1 - gw)*w2*w0 - gw^2*w2*w0*w02,
+     (1 - gz)*z23*z2 + gz*z2 - (1 - gw)*w1 - gw*w13*w1,
+     (1 - gz)*z3 + gz*z23*z3 - (1 - gw)^2*w0*w01 - gw*(1 - gw)*w0*(3-w13) - gw^2*w0*w02*w23,
+     (1 - gz)*z13*z23*z2 + gz*z2 - w13*w1,
+     (1 - gz)*z13*z3 + gz*z3 - (1 - gw)^2*w0*w13*w01 - gw*(1 - gw)*w0*(3-w23) - gw^2*w0*w02,
+     (1 - gz)*z1 + gz*z23*z13*z1 - w23*w2,
+     (1 - gz)*z1 + gz*z13*z1 - (1 - gw)*w23*w2 - gw*w2,
+     (1 - gz)^2*z2*z0*z01*z13*z23 + 2*gz*(1 - gz)*z2*z0 + gz^2*z2*z0*z02 - w3*w13*w1,
+     (1 - gz)^2*z0*z13*z01 + gz*(1 - gz)*z0*(3-z23)+ gz^2*z0*z02 - (1 - gw)*w13*w3 - gw*w3,
+     (1 - gz)^2*z3*z0*z13*z01 + 2*gz*(1 - gz)*z3*z0 + gz^2*z3*z0*z23*z02 - (1 - gw)^2*w3*w0*w13*w01 - 2*gw*(1 - gw)*w3*w0 - gw^2*w3*w0*w23*w02,
+     (1 - gz)^2*z0*z01 + gz*(1 - gz)*z0*(3-z23*z13)+gz^2*z0*z02 - w3,
+     (1 - gz)^2*z0*z01 + gz*(1 - gz)*z0*(3-z13)+gz^2*z0*z02*z23 - (1 - gw)*w3 - gw*w23*w3,
+     (1 - gz)^2*z1*z0*z01 + 2*gz*(1 - gz)*z1*z0 + gz^2*z1*z0*z02*z23*z13 - w2*w23*w3,
+     (1 - gz)*(3 - 2*z13) + gz*z23 - (1 - gw)*(3-2*w02) - gw*w01,
+     (1 - gz)*z13 + gz*(3-2*z23) - (1 - gw)*w02 - gw*(3-2*w01))
+
+                2                      2               2                                                                                                      2               2                           2            2                                                                                                                        2                                              2                                   2                                                                                          2               2           2                        2                                                                                                               2               2           2                                         2                                                                                                                                                   2                                              2                                   2                                 2               2           2                             2                                                                     2                  2                  2                  2                                                           2                           2                                                 2               2                           2            2                                          2               2           2            2                                                                          2                      2               2
+o2 = ideal (- gw w0*w02*w23*w13*w1 - gw w0*w1*w01 + 2gw w0*w1 + 2gw*w0*w1*w01 + z2*z23*z3 - 2gw*w0*w1 - w0*w1*w01, - gw*w23*w13*w1 + z2*z23 + gw*w1 - w1, - gw w0*w23*w13 - gw w0*w02 + gw*w0*w23*w13 - gw w0*w01 + 3gw w0 + 2gw*w0*w01 - 3gw*w0 - w0*w01 + z3, z2*z23*z13*z1 - w2*w23*w13*w1, gw*w2*w23*w13 - w2*w23*w13 + z13*z1 - gw*w2, - gw w0*w2*w23*w13*w01 + 2gw*w0*w2*w23*w13*w01 - gw w0*w02*w2 - w0*w2*w23*w13*w01 + 2gw w0*w2 + z3*z13*z1 - 2gw*w0*w2, - gz*z2*z23 - gw*w13*w1 + gz*z2 + z2*z23 + gw*w1 - w1, - gw w0*w02*w23 - gw w0*w13 - gw w0*w01 + gz*z23*z3 + 3gw w0 + gw*w0*w13 + 2gw*w0*w01 - gz*z3 - 3gw*w0 - w0*w01 + z3, - gz*z2*z23*z13 + z2*z23*z13 + gz*z2 - w13*w1, - gw w0*w13*w01 - gw w0*w02 - gw w0*w23 + 2gw*w0*w13*w01 - gz*z3*z13 + 3gw w0 + gw*w0*w23 - w0*w13*w01 + gz*z3 + z3*z13 - 3gw*w0, gz*z23*z13*z1 - gz*z1 - w2*w23 + z1, gz*z13*z1 + gw*w2*w23 - gz*z1 - gw*w2 - w2*w23 + z1, gz z0*z2*z23*z13*z01 - 2gz*z0*z2*z23*z13*z01 + gz z0*z02*z2 + z0*z2*z23*z13*z01 - 2gz z0*z2 + 2gz*z0*z2 - w3*w13*w1, gz z0*z13*z01 + gz z0*z02 + gz z0*z23 - 2gz*z0*z13*z01 - 3gz z0 - gz*z0*z23 + z0*z13*z01 + gw*w3*w13 + 3gz*z0 - gw*w3 - w3*w13, gz z0*z02*z23*z3 + gz z0*z3*z13*z01 - gw w0*w02*w23*w3 - gw w0*w3*w13*w01 - 2gz*z0*z3*z13*z01 + 2gw*w0*w3*w13*w01 - 2gz z0*z3 + z0*z3*z13*z01 + 2gw w0*w3 - w0*w3*w13*w01 + 2gz*z0*z3 - 2gw*w0*w3, gz z0*z23*z13 + gz z0*z02 - gz*z0*z23*z13 + gz z0*z01 - 3gz z0 - 2gz*z0*z01 + 3gz*z0 + z0*z01 - w3, gz z0*z02*z23 + gz z0*z13 + gz z0*z01 - 3gz z0 - gz*z0*z13 - 2gz*z0*z01 - gw*w23*w3 + 3gz*z0 + z0*z01 + gw*w3 - w3, gz z0*z02*z23*z13*z1 + gz z0*z1*z01 - 2gz z0*z1 - 2gz*z0*z1*z01 + 2gz*z0*z1 + z0*z1*z01 - w2*w23*w3, gz*z23 + 2gz*z13 - 2gw*w02 - gw*w01 - 3gz - 2z13 + 3gw + 2w02, - 2gz*z23 - gz*z13 + gw*w02 + 2gw*w01 + 3gz + z13 - 3gw - w02)
+
+o2 : Ideal of R
+
+i3 : 
+     
+     G = eliminate(I,{gw, w0, w02, w2, w23, w3, w13, w1, w01})
