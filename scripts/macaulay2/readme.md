@@ -1,5 +1,5 @@
 # To do
-- we are running only the n=7 first
+- we are running only the n=6 first
 
 
 # Summary
@@ -154,7 +154,7 @@ cat nright-nleft-7.m2 | M2 &> nright-nleft-7_out.txt
 ```
 Started 10/3 105pm. Error `mmap(PROT_NONE) failed` at 21:11 and `Aborted (core dumped)`.
 Started again 10/5 1058am. It was killed without any error.
-Started again 10/8 942am.
+Started again 10/8 942am. Still running 5pm.
 
 ### `nright-nup-7.m2`
 
@@ -168,7 +168,8 @@ cat nright-nup-7.m2 | M2 &> nright-nup-7_out.txt
 ```
 Started 10/3 111pm. Error `mmap(PROT_NONE) failed` at 17:55 and `Aborted (core dumped)`.
 Started again 10/5 1100am. Same error.
-Started again 10/8 945am.
+Started again 10/8 945am. Same error.
+We are not restarting bc we are focusing on n=6 first.
 
 ### `nleft-nup-7.m2`    
 
@@ -182,7 +183,84 @@ cat nleft-nup-7.m2 | M2 &> nleft-nup-7_out.txt
 ```
 Started 10/3 112pm. Error `mmap(PROT_NONE) failed` at 21:08 and `Aborted (core dumped)`.
 Started again 10/5 1101am. Killed without error.
-Started again 10/8 945am.
+Started again 10/8 945am. Same error.
+We are not restarting bc we are focusing on n=6 first.
+
+## Comparisons of networks with 6 taxa
+
+### `ndown-nright-6.m2`
+
+```shell
+screen -S ndown-nright-6
+```
+
+```shell
+cd diamond-identifiability/scripts/macaulay2
+cat ndown-nright-6.m2 | M2 &> ndown-nright-6_out.txt
+```
+Started 10/8 5pm. Finished 5:04pm.
+
+### `ndown-nleft-6.m2`
+
+```shell
+screen -S ndown-nleft-6
+```
+
+```shell
+cd diamond-identifiability/scripts/macaulay2
+cat ndown-nleft-6.m2 | M2 &> ndown-nleft-6_out.txt
+```
+Started 10/8 5pm. Finished 5:04pm.
+
+
+### `ndown-nup-6.m2`
+
+```shell
+screen -S ndown-nup-6
+```
+
+```shell
+cd diamond-identifiability/scripts/macaulay2
+cat ndown-nup-6.m2 | M2 &> ndown-nup-6_out.txt
+```
+Started 10/8 5pm.
+
+
+### `nright-nleft-6.m2`
+
+```shell
+screen -S nright-nleft-6
+```
+
+```shell
+cd diamond-identifiability/scripts/macaulay2
+cat nright-nleft-6.m2 | M2 &> nright-nleft-6_out.txt
+```
+Started 10/8 5pm.
+
+### `nright-nup-6.m2`
+
+```shell
+screen -S nright-nup-6
+```
+
+```shell
+cd diamond-identifiability/scripts/macaulay2
+cat nright-nup-6.m2 | M2 &> nright-nup-6_out.txt
+```
+Started 10/8 5pm.
+
+### `nleft-nup-6.m2`    
+
+```shell
+screen -S nleft-nup-6
+```
+
+```shell
+cd diamond-identifiability/scripts/macaulay2
+cat nleft-nup-6.m2 | M2 &> nleft-nup-6_out.txt
+```
+Started 10/8 5pm.
 
 # Summarizing Macaulay2 results
 
