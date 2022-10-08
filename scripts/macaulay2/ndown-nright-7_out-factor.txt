@@ -1,0 +1,134 @@
+## Manually created file by running Maculay locally and then running the factor function
+## Claudia October 2022
+
+i4 : factor(G_0)
+
+                  2
+o4 = (z1)(z13 - 1) (z3)(gz)(gz - 1)
+
+o4 : Expression of class Product
+
+i5 : factor(G_1)
+
+o5 = (z1)(z13 - 1)(z3)(z23 - 1)(gz)(gz - 1)
+
+o5 : Expression of class Product
+
+i6 : factor(G_2)
+
+                      2
+o6 = (z1)(z3)(z23 - 1) (z2)(gz)(gz - 1)
+
+o6 : Expression of class Product
+
+i7 : factor(G_3)
+
+                                         3          2                   2             2                2
+o7 = (z1)(z23 - 1)(z2)(gz)(gz - 1)(gz*z23  - 2gz*z23  - gz*z23*z13 + z23 z13 + z23*z13  + 2gz*z23 + z23  + gz*z13 - gz - 4z23 + 1)
+
+o7 : Expression of class Product
+
+i8 : factor(G_4)
+
+                                2   3             4         3            2   2              3         3          2                 2      2   2           3          2                     2             2           2                2                           2
+o8 = (z1)(z2)(gz)(gz - 1)(gz*z23 z13  + gz*z23*z13  + gz*z23 z13 - gz*z23 z13  - 2gz*z23*z13  - gz*z23  - 3gz*z23 z13 - 4gz*z23*z13  + z23 z13  + 2z23*z13  + 3gz*z23  + 11gz*z23*z13 + z23 z13 + 2gz*z13  - 2z23*z13  - 6gz*z23 - z23  - 4gz*z13 - 9z23*z13 - z13  + 2gz + 7z23 + 6z13 - 4)
+
+o8 : Expression of class Product
+
+i9 : factor(G_5)
+
+                                     2       2         3      2            2   2     2             2      2         2             2     2                2
+o9 = (z1)(z13 - 1)(z2)(gz)(gz - 1)(gz z23*z13  + gz*z23  - 2gz z23*z13 - gz z13  + gz z23 - 3gz*z23  + 2gz z13 + z23 z13 + z23*z13  - gz  + 3gz*z23 + z23  - z23*z13 - gz - 5z23 - z13 + 4)
+
+o9 : Expression of class Product
+
+i10 : factor(G_6)
+
+                   2                       3          2                   2             2                2
+o10 = (z1)(z13 - 1) (z2)(gz)(gz - 1)(gz*z23  - 2gz*z23  - gz*z23*z13 + z23 z13 + z23*z13  + 2gz*z23 + z23  + gz*z13 - gz - 4z23 + 1)
+
+o10 : Expression of class Product
+
+i11 : factor(G_7)
+
+                             2   2   2      2   2            3         2       2     2   2      2                 2        2   2             2      2   2          3      2         2                       2            2          2     2
+o11 = (z1)(z2)(gz)(gz - 1)(gz z23 z13  - 2gz z23 z13 - gz*z23 z13 - 2gz z23*z13  + gz z23  + 4gz z23*z13 + 3gz*z23 z13 + gz z13  + gz*z23*z13  - z23 z13  - z23*z13  - 2gz z23 - 2gz z13 - 5gz*z23*z13 - z23 z13 - gz*z13  + z23*z13  + gz  + gz*z23 + 3gz*z13 + 4z23*z13 - gz - 2)
+
+o11 : Expression of class Product
+
+i12 : factor(G_8)
+
+                             2   3        2   4     2   3      2   2            3            2   2     2   3             3      2   2          3     2                 2         2   2             2      2   2         3          3     2              2      2                         2             2           2      3      2                  2                            2
+o12 = (z1)(z2)(gz)(gz - 1)(gz z23 z13 + gz z13  - gz z23  - 2gz z23 z13 - gz*z23 z13 + gz*z23 z13  - gz z13  + gz*z23*z13  + 2gz z23  + 3gz*z23  + gz z23*z13 + 4gz*z23 z13 - 3gz z13  - gz*z23*z13  - z23 z13  + gz*z13  - z23*z13  - gz z23 - 10gz*z23  + 5gz z13 - 11gz*z23*z13 + 2z23 z13 - 2gz*z13  + 5z23*z13  + z13  - 2gz  + 15gz*z23 + 3z23  + 6gz*z13 + 3z23*z13 - 2z13  - 6gz - 15z23 - 9z13 + 14)
+
+o12 : Expression of class Product
+
+i13 : factor(G_9)
+
+                              3   4       2   5          6      3   3             4       2   4         5           5      4            2   2      3   2              3       2   3          4           4          2          3                 2        2   2            3      4         2       3                     2             2           2       3               2                             2
+o13 = (z1)(z2)(gz)(gz - 1)(z23 z13  + 2z23 z13  + z23*z13  - z23 z13  + gz*z23*z13  - 2z23 z13  + gz*z13  - 2z23*z13  - z23 z13 - gz*z23 z13  - z23 z13  - 2gz*z23*z13  - 8z23 z13  - 3gz*z13  - 6z23*z13  + 2gz*z23 z13 + 7z23 z13 + 2gz*z23*z13  + 10z23 z13  + 14z23*z13  + z13  - gz*z23  - 2z23  - 2gz*z23*z13 - 9z23 z13 + 7gz*z13  + 2z23*z13  - 3z13  + gz*z23 + z23  - 7gz*z13 - 10z23*z13 + 4z13  + 2gz + 5z23 - 5z13 + 2)
+
+o13 : Expression of class Product
+
+i14 : factor(G_10)
+
+                  2           2   4     2       2     2   3          3      2                 2         2   2             2         3     2             2      2                        2            2           2      3      2                 2                           2
+o14 = (z1)(z2)(gz) (gz - 1)(gz z13  + gz z23*z13  - gz z13  + 2gz*z23  - 2gz z23*z13 + 2gz*z23 z13 - 4gz z13  - gz*z23*z13  + gz*z13  + gz z23 - 7gz*z23  + 7gz z13 - 4gz*z23*z13 + 2z23 z13 - gz*z13  + 4z23*z13  + z13  - 3gz  + 9gz*z23 + 2z23  + 3gz*z13 - z23*z13 - 2z13  - 4gz - 11z23 - 8z13 + 13)
+
+o14 : Expression of class Product
+
+i15 : factor(G_11)
+
+                                       3   3      2   4              4         4          3         2       2          2   2       2   3               3          4           4          3       2                  2          3          2   2               2           3            3       4      2             2                     2              2           2        3      2                 2                               2
+o15 = (z3)(z23 - 1)(z2)(gz)(gz - 1)(z23 z13  + 3gz z13  - 3gz*z23*z13  + gz*z23  - 2gz*z23 z13 + 6gz z23*z13  - 4gz*z23 z13  - 12gz z13  + 17gz*z23*z13  - 9gz*z13  + 3z23*z13  - 4gz*z23  - 12gz z23*z13 + 11gz*z23 z13 - 3z23 z13 + 12gz z13  - 20gz*z23*z13  + 34gz*z13  - 14z23*z13  + 6z13  + 6gz z23 + 8gz*z23  - 8gz*z23*z13 + 4z23 z13 - 48gz*z13  - 5z23*z13  - 17z13  - 3gz  - 2gz*z23 + 6z23  + 38gz*z13 + 14z23*z13 + 17z13  - 9gz - 9z23 - 3z13)
+
+o15 : Expression of class Product
+
+i16 : factor(G_12)
+
+                                          2   3      2       2          2   2      2   3             3      2   3         3      2              2   2              2          3          3      2             2       2                        2             2          2       3      2                                    2
+o16 = (z3)(z23 - 1)(z2)(gz)(gz - 1)(gz*z23 z13  + 3gz z23*z13  - 2gz*z23 z13  + 3gz z13  + gz*z23*z13  - z23 z13  - gz*z23  - 6gz z23*z13 - 12gz z13  - 4gz*z23*z13  - 5gz*z13  - z23*z13  + 3gz z23 + 6gz*z23  + 15gz z13 + 4gz*z23*z13 + 3z23 z13 + 9gz*z13  - z23*z13  + 2z13  - 6gz  - 8gz*z23 - gz*z13 - 3z23*z13 + z13 )
+
+o16 : Expression of class Product
+
+i17 : factor(G_13)
+
+                                      2       3      2       2      2   3              3     2             2   2              2          3          3         2      2                           2       3      2
+o17 = (z3)(z23 - 1)(z2)(gz)(gz - 1)(gz z23*z13  - 2gz z23*z13  + 2gz z13  - 2gz*z23*z13  + gz z23*z13 - 7gz z13  + 2gz*z23*z13  - 4gz*z13  + z23*z13  + gz*z23  + 8gz z13 + 2gz*z23*z13 + 7gz*z13  + 2z13  - 3gz  - 4gz*z23 - 2gz*z13 - 3z23*z13)
+
+o17 : Expression of class Product
+
+i18 : factor(G_14)
+
+                                          3   2      2       2         2   2      2   3              3          3      2                 2          2   2              2      2   2          3           3      2             2       2                       2              2           2       3      2                  2                             2
+o18 = (z3)(z23 - 1)(z2)(gz)(gz - 1)(gz*z23 z13  + 3gz z23*z13  - gz*z23 z13  + 3gz z13  - 3gz*z23*z13  - 2gz*z23  - 6gz z23*z13 - 3gz*z23 z13 - 12gz z13  + 4gz*z23*z13  + z23 z13  - 9gz*z13  + 3z23*z13  + 3gz z23 + 9gz*z23  + 15gz z13 + 2gz*z23*z13 + z23 z13 + 26gz*z13  - 4z23*z13  + 6z13  - 6gz  - 10gz*z23 - 3z23  - 23gz*z13 - 7z23*z13 - 9z13  + 9gz + 9z23 + 3z13)
+
+o18 : Expression of class Product
+
+i19 : factor(G_15)
+
+                                      2   2   2      2   2            2   2     2   2     2   2             2          2      2                          2          2     2                                     2
+o19 = (z3)(z23 - 1)(z2)(gz)(gz - 1)(gz z23 z13  - 2gz z23 z13 - gz*z23 z13  + gz z23  - gz z13  + gz*z23*z13  + 2gz*z23  + 2gz z13 - gz*z23*z13 + 3gz*z13  - z23*z13  - gz  - 2gz*z23 - 5gz*z13 - z23*z13 - 2z13  + 3gz + 3z23 + z13)
+
+o19 : Expression of class Product
+
+i20 : factor(G_16)
+
+                                       3       2      3   3     2   3      3            2   2          3   2      2       2      2   3      3         2   2       3         2                2          2   2              2          3      3      2            2      2                          2          2      2                         2
+o20 = (z3)(z23 - 1)(z2)(gz)(gz - 1)(3gz z23*z13  + 3gz z13  - gz z23  - 6gz z23*z13 - gz z23 z13 - 12gz z13  - 2gz z23*z13  - 6gz z13  + 3gz z23 + 6gz z23  + 15gz z13 + 3gz z23*z13 + gz*z23 z13 + 14gz z13  - 2gz*z23*z13  + 3gz*z13  - 6gz  - 8gz z23 - gz*z23  - 8gz z13 - 3gz*z23*z13 - gz*z13  + z23*z13  + 3gz  + 4gz*z23 - gz*z13 - z13 )
+
+o20 : Expression of class Product
+
+i21 : factor(G_17)
+
+                                      2   3        2   3      2   2        2       2      2   2      2                 2        2   2             2      2             2      2                           2           2     2                                     2
+o21 = (z3)(z23 - 1)(z2)(gz)(gz - 1)(gz z23 z13 - gz z23  - 2gz z23 z13 - gz z23*z13  + 2gz z23  + 3gz z23*z13 + 2gz*z23 z13 + gz z13  - gz*z23*z13  - 2gz z23 - 2gz*z23  - 2gz z13 + 2gz*z23*z13 - 5gz*z13  + 2z23*z13  + gz  - gz*z23 + 8gz*z13 - 2z23*z13 + 4z13  - 3gz - 3z23 - z13)
+
+o21 : Expression of class Product
+
+i22 : factor(G_18)
+
+                                      2   4      2   3     2   2            3            2   2      2   2         3      2                2                 2      2   2      2             2     2                           2           2     2                           2
+o22 = (z3)(z23 - 1)(z2)(gz)(gz - 1)(gz z23  - 3gz z23  - gz z23 z13 - gz*z23 z13 + gz*z23 z13  + 4gz z23  + gz*z23  + 2gz z23*z13 - gz*z23 z13 + 4gz*z23*z13  - z23 z13  - 3gz z23 + 2gz*z23  - gz z13 - 8gz*z23*z13 + 4gz*z13  - 4z23*z13  + gz  - 8gz*z13 + z23*z13 - 4z13  + 6gz + 6z23 + 2z13)
+
+o22 : Expression of class Product

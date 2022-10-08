@@ -1,3 +1,10 @@
+# To do
+- we are running only the n=7 first
+
+
+# Summary
+I started this code by wanting to run all polynomial equations for n=8, n=7 and n=6 taxa, but midway realized that I only need the n=6 case. So, you can skip the sections of 8 taxa and 7 taxa.
+
 # Testing macaulay2 locally
 
 1. [Download M2](http://www2.macaulay2.com/Macaulay2/Downloads/)
@@ -16,6 +23,9 @@ module load M2-1.14
 
 ## Comparisons of networks with 8 taxa
 
+I realized that we do not need to run these cases if n=7 are identifiable (bc you can always get rid of one taxa and be identifiable).
+So, I will not run these cases.
+
 ### `ndown-nright.m2`
 
 ```shell
@@ -27,7 +37,7 @@ cd diamond-identifiability/scripts/macaulay2
 cat ndown-nright.m2 | M2 &> ndown-nright_out.txt
 ```
 Started 10/3 1030am. Error at 1:46pm `mmap(PROT_NONE) failed` and `Aborted (core dumped)`.
-Started again 10/5 1047am.
+Started again 10/5 1047am. Same error!
 
 
 ### `ndown-nleft.m2`
@@ -40,7 +50,7 @@ screen -S ndown-nleft
 cd diamond-identifiability/scripts/macaulay2
 cat ndown-nleft.m2 | M2 &> ndown-nleft_out.txt
 ```
-Started 10/3 1035am. Still running 10/5 1048am.
+Started 10/3 1035am. Still running 10/5 1048am. Error 10/5 1054am ``mmap(PROT_NONE) failed`, so maybe the error has to do with me starting other jobs!
 
 ### `ndown-nup.m2`
 
@@ -53,7 +63,7 @@ cd diamond-identifiability/scripts/macaulay2
 cat ndown-nup.m2 | M2 &> ndown-nup_out.txt
 ```
 Started 10/3 1035am. Error `mmap(PROT_NONE) failed` at 15:21 and `Aborted (core dumped)`.
-Started again 10/5 1049am.
+Started again 10/5 1049am. Same error!
 
 ### `nright-nleft.m2`
 
@@ -66,7 +76,7 @@ cd diamond-identifiability/scripts/macaulay2
 cat nright-nleft.m2 | M2 &> nright-nleft_out.txt
 ```
 Started 10/3 1037am. Error `mmap(PROT_NONE) failed` at 14:05 and `Aborted (core dumped)`.
-Started again 10/5 1051am.
+Started again 10/5 1051am. Same error.
 
 ### `nright-nup.m2`
 
@@ -79,7 +89,7 @@ cd diamond-identifiability/scripts/macaulay2
 cat nright-nup.m2 | M2 &> nright-nup_out.txt
 ```
 Started 10/3 1037am. Error `mmap(PROT_NONE) failed` at 17:26 and `Aborted (core dumped)`.
-Started again 10/5 1052am.
+Started again 10/5 1052am. Same error.
 
 ### `nleft-nup.m2`    
 
@@ -92,7 +102,7 @@ cd diamond-identifiability/scripts/macaulay2
 cat nleft-nup.m2 | M2 &> nleft-nup_out.txt
 ```
 Started 10/3 1040am. Error `mmap(PROT_NONE) failed` at 17:44 and `Aborted (core dumped)`.
-Started again 10/5 1053am.
+Started again 10/5 1053am. Same error.
 
 ## Comparisons of networks with 7 taxa
 
@@ -143,7 +153,8 @@ cd diamond-identifiability/scripts/macaulay2
 cat nright-nleft-7.m2 | M2 &> nright-nleft-7_out.txt
 ```
 Started 10/3 105pm. Error `mmap(PROT_NONE) failed` at 21:11 and `Aborted (core dumped)`.
-Started again 10/5 1058am.
+Started again 10/5 1058am. It was killed without any error.
+Started again 10/8 942am.
 
 ### `nright-nup-7.m2`
 
@@ -156,7 +167,8 @@ cd diamond-identifiability/scripts/macaulay2
 cat nright-nup-7.m2 | M2 &> nright-nup-7_out.txt
 ```
 Started 10/3 111pm. Error `mmap(PROT_NONE) failed` at 17:55 and `Aborted (core dumped)`.
-Started again 10/5 1100am.
+Started again 10/5 1100am. Same error.
+Started again 10/8 945am.
 
 ### `nleft-nup-7.m2`    
 
@@ -169,7 +181,35 @@ cd diamond-identifiability/scripts/macaulay2
 cat nleft-nup-7.m2 | M2 &> nleft-nup-7_out.txt
 ```
 Started 10/3 112pm. Error `mmap(PROT_NONE) failed` at 21:08 and `Aborted (core dumped)`.
-Started again 10/5 1101am.
+Started again 10/5 1101am. Killed without error.
+Started again 10/8 945am.
+
+# Summarizing Macaulay2 results
+
+## Networks with 7 yaxa
+
+```shell
+cd Dropbox/Sharing/projects/present/george-diamond/diamond-identifiability/scripts/macaulay2/
+```
+
+We copied the file `text_convert.jl` created by Bella Wu [original repo](https://github.com/solislemuslab/phylo-invariants/blob/master/scripts/julia/text_convert.jl) to use the `macaulay_latex`function.
+
+We have to change the function slightly because it expects the invariants to have `a` as variable. We also have to change `gz` for `z4` so that the same code works.
+
+### ndown-nright-7_out.txt
+
+```shell
+sed 's/gz/z4/g' ndown-nright-7_out.txt > ndown-nright-7_out_gz-replaced.txt
+```
+
+Then, we move to `text_convert.jl`, and then we copy the result in latex.
+
+In addition, I ran the same Macaulay script locally and included `factor(G_0)`,....,`factor(G_18)`. The output is copied and pasted in `ndown-nright-7_out-factor.txt`.
+
+
+We will not summarize these cases yet as we will focus on n=6 for now:
+- ndown-nleft-7_out.txt
+- ndown-nup-7_out.txt
 
 
 # Polynomial equations for all networks
