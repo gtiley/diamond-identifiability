@@ -251,7 +251,8 @@ cd diamond-identifiability/scripts/macaulay2
 cat nright-nup-6.m2 | M2 &> nright-nup-6_out.txt
 ```
 Started 10/8 5pm. Error `mmap(PROT_NONE) failed`.
-Started again 10/10 7:37am.
+Started again 10/10 7:37am. Error 10:30am `mmap(PROT_NONE) failed`.
+Not restarting for now to give space to the other two jobs.
 
 ### `nleft-nup-6.m2`    
 
