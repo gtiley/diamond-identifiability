@@ -1,0 +1,49 @@
+Macaulay2, version 1.20
+with packages: ConwayPolynomials, Elimination, IntegralClosure, InverseSystems, Isomorphism, LLLBases, MinimalPrimes, OnlineLookup, PrimaryDecomposition, ReesAlgebra, Saturation, TangentCone
+
+i1 : R = QQ[gz, z23, z3, z13, z1, gu, u2, u23, u3, u13, u01]
+
+o1 = R
+
+o1 : PolynomialRing
+
+i2 : I = ideal(
+z3 - (1 - gu)*u23*u2 - gu*u2,
+z13*z1 - (1 - gu)*u3 - gu*u23*u3,
+z3*z13*z1 - u2*u23*u3,
+(1 - gz)*z3 + gz*z23*z3 - (1 - gu)*u13*u23*u2 - gu*u2,
+(1 - gz)*z13*z3 + gz*z3 - u23*u2,
+(1 - gz)*z1 + gz*z23*z13*z1 - (1 - gu)*u13*u3 - gu*u3,
+(1 - gz)*z1 + gz*z13*z1 - u3,
+(1 - gz)*(3 - 2*z13) + gz*z23 - (1 - gu)*u01 - gu*(3 - 2*u13),
+(1 - gz)*z13 + gz*(3-2*z23) - (1 - gu)*(3 -2*u01) - gu*u13)
+
+o2 = ideal (gu*u2*u23 - gu*u2 - u2*u23 + z3, - gu*u23*u3 + z13*z1 + gu*u3 - u3, z3*z13*z1 - u2*u23*u3, gu*u2*u23*u13 + gz*z23*z3 - u2*u23*u13 - gz*z3 - gu*u2 + z3, - gz*z3*z13 + gz*z3 + z3*z13 -
+     -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     u2*u23, gz*z23*z13*z1 + gu*u3*u13 - gz*z1 - gu*u3 - u3*u13 + z1, gz*z13*z1 - gz*z1 + z1 - u3, gz*z23 + 2gz*z13 + 2gu*u13 + gu*u01 - 3gz - 2z13 - 3gu - u01 + 3, - 2gz*z23 - gz*z13 - gu*u13 -
+     -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     2gu*u01 + 3gz + z13 + 3gu + 2u01 - 3)
+
+o2 : Ideal of R
+
+i3 : G = eliminate(I,{gu, u2, u23, u3, u13, u01})
+
+              2      2        2                     2       2                                    2                  2              2                                 2
+o3 = ideal (gz z3*z13 z1 - 2gz z3*z13*z1 - gz*z3*z13 z1 + gz z3*z1 + 2gz*z3*z13*z1 - gz*z3*z1, gz z23*z3*z13*z1 - gz z23*z3*z1 - gz z3*z13*z1 - gz*z23*z3*z13*z1 + gz z3*z1 + gz*z23*z3*z1 +
+     -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     gz*z3*z13*z1 - gz*z3*z1)
+
+o3 : Ideal of R
+
+i4 : factor(G_0)
+
+                  2
+o4 = (z1)(z13 - 1) (z3)(gz)(gz - 1)
+
+o4 : Expression of class Product
+
+i5 : factor(G_1)
+
+o5 = (z1)(z13 - 1)(z3)(z23 - 1)(gz)(gz - 1)
+
+o5 : Expression of class Product

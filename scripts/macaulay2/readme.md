@@ -154,7 +154,8 @@ cat nright-nleft-7.m2 | M2 &> nright-nleft-7_out.txt
 ```
 Started 10/3 105pm. Error `mmap(PROT_NONE) failed` at 21:11 and `Aborted (core dumped)`.
 Started again 10/5 1058am. It was killed without any error.
-Started again 10/8 942am. Still running 5pm.
+Started again 10/8 942am. Still running 5pm. Error `mmap(PROT_NONE) failed` (checked on 10/10 7:41am).
+We are not restarting bc we are focusing on n=6 first.
 
 ### `nright-nup-7.m2`
 
@@ -223,7 +224,7 @@ screen -S ndown-nup-6
 cd diamond-identifiability/scripts/macaulay2
 cat ndown-nup-6.m2 | M2 &> ndown-nup-6_out.txt
 ```
-Started 10/8 5pm.
+Started 10/8 5pm. Finished 18:19.
 
 
 ### `nright-nleft-6.m2`
@@ -236,7 +237,8 @@ screen -S nright-nleft-6
 cd diamond-identifiability/scripts/macaulay2
 cat nright-nleft-6.m2 | M2 &> nright-nleft-6_out.txt
 ```
-Started 10/8 5pm.
+Started 10/8 5pm. Error `mmap(PROT_NONE) failed`.
+Started again 10/10 7:37am.
 
 ### `nright-nup-6.m2`
 
@@ -248,7 +250,8 @@ screen -S nright-nup-6
 cd diamond-identifiability/scripts/macaulay2
 cat nright-nup-6.m2 | M2 &> nright-nup-6_out.txt
 ```
-Started 10/8 5pm.
+Started 10/8 5pm. Error `mmap(PROT_NONE) failed`.
+Started again 10/10 7:37am.
 
 ### `nleft-nup-6.m2`    
 
@@ -260,7 +263,7 @@ screen -S nleft-nup-6
 cd diamond-identifiability/scripts/macaulay2
 cat nleft-nup-6.m2 | M2 &> nleft-nup-6_out.txt
 ```
-Started 10/8 5pm.
+Started 10/8 5pm. Still running 10/10 7:38am.
 
 # Summarizing Macaulay2 results
 
@@ -289,6 +292,19 @@ We will not summarize these cases yet as we will focus on n=6 for now:
 - ndown-nleft-7_out.txt
 - ndown-nup-7_out.txt
 
+## Networks with 6 taxa
+
+### ndown-nright-6_out.txt
+This run took 4minutes, so we will run it locally to run the factor function.
+The output is copied and pasted in `ndown-nright-6_out-factor.txt` which will now be included in latex.
+
+### ndown-nleft-6_out.txt
+This run took 4minutes, so we will run it locally to run the factor function.
+The output is copied and pasted in `ndown-nleft-6_out-factor.txt` which will now be included in latex.
+
+### ndown-nup-6_out.txt
+This run took 3hr, and we will run it locally to run the factor function.
+The output is copied and pasted in `ndown-nup-6_out-factor.txt` which will now be included in latex.
 
 # Polynomial equations for all networks
 
