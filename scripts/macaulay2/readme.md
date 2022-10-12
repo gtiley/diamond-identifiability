@@ -238,7 +238,8 @@ cd diamond-identifiability/scripts/macaulay2
 cat nright-nleft-6.m2 | M2 &> nright-nleft-6_out.txt
 ```
 Started 10/8 5pm. Error `mmap(PROT_NONE) failed`.
-Started again 10/10 7:37am.
+Started again 10/10 7:37am. Error `mmap(PROT_NONE) failed`.
+Not restarting to leave just one job at a time.
 
 ### `nright-nup-6.m2`
 
@@ -253,6 +254,7 @@ cat nright-nup-6.m2 | M2 &> nright-nup-6_out.txt
 Started 10/8 5pm. Error `mmap(PROT_NONE) failed`.
 Started again 10/10 7:37am. Error 10:30am `mmap(PROT_NONE) failed`.
 Not restarting for now to give space to the other two jobs.
+Started in the mac desktop 10/10 7:38pm. Still running 10/12 10:14am.
 
 ### `nleft-nup-6.m2`    
 
@@ -264,7 +266,7 @@ screen -S nleft-nup-6
 cd diamond-identifiability/scripts/macaulay2
 cat nleft-nup-6.m2 | M2 &> nleft-nup-6_out.txt
 ```
-Started 10/8 5pm. Still running 10/10 7:38am.
+Started 10/8 5pm. Still running 10/10 7:38am. Still running 10/12 10:14am.
 
 # Summarizing Macaulay2 results
 

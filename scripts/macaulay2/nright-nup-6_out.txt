@@ -1,7 +1,5 @@
-Macaulay2, version 1.14
---loading configuration for package "FourTiTwo" from file /mnt/ws/home/csolislemus/.Macaulay2/init-FourTiTwo.m2
---loading configuration for package "Topcom" from file /mnt/ws/home/csolislemus/.Macaulay2/init-Topcom.m2
-with packages: ConwayPolynomials, Elimination, IntegralClosure, InverseSystems, LLLBases, PrimaryDecomposition, ReesAlgebra, TangentCone, Truncations
+Macaulay2, version 1.20
+with packages: ConwayPolynomials, Elimination, IntegralClosure, InverseSystems, Isomorphism, LLLBases, MinimalPrimes, OnlineLookup, PrimaryDecomposition, ReesAlgebra, Saturation, TangentCone
 
 i1 : --------------------------------------------------------
      -- Topology identifiability N_right vs N_up         --
