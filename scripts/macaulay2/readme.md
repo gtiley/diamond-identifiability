@@ -241,6 +241,8 @@ Started 10/8 5pm. Error `mmap(PROT_NONE) failed`.
 Started again 10/10 7:37am. Error `mmap(PROT_NONE) failed`.
 Not restarting to leave just one job at a time.
 
+This is the same as ndown-nup, so we won't run it.
+
 ### `nright-nup-6.m2`
 
 ```shell
@@ -256,6 +258,8 @@ Started again 10/10 7:37am. Error 10:30am `mmap(PROT_NONE) failed`.
 Not restarting for now to give space to the other two jobs.
 Started in the mac desktop 10/10 7:38pm. Still running 10/12 10:14am.
 
+This is the same as ndown-nleft, so we won't run it.
+
 ### `nleft-nup-6.m2`    
 
 ```shell
@@ -268,6 +272,8 @@ cat nleft-nup-6.m2 | M2 &> nleft-nup-6_out.txt
 ```
 Started 10/8 5pm. Still running 10/10 7:38am. Still running 10/12 10:14am.
 Error 10/14 20:48 `mmap(PROT_NONE) failed`.
+
+This is the same as ndown-nright, so we won't run it.
 
 # Summarizing Macaulay2 results
 
