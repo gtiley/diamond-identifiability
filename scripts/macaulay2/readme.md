@@ -267,6 +267,7 @@ cd diamond-identifiability/scripts/macaulay2
 cat nleft-nup-6.m2 | M2 &> nleft-nup-6_out.txt
 ```
 Started 10/8 5pm. Still running 10/10 7:38am. Still running 10/12 10:14am.
+Error 10/14 20:48 `mmap(PROT_NONE) failed`.
 
 # Summarizing Macaulay2 results
 
