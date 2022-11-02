@@ -410,15 +410,24 @@ We will not summarize these cases yet as we will focus on n=6 for now:
 cd Dropbox/Sharing/projects/present/george-diamond/diamond-identifiability/scripts/macaulay2/
 ```
 
-We will use the file `text_convert.jl` created by Bella Wu [original repo](https://github.com/solislemuslab/phylo-invariants/blob/master/scripts/julia/text_convert.jl) to use the `macaulay_latex`function.
-
 ### ndown-nright-6_out.txt
 This run took 4minutes, so we will run it locally to run the factor function.
-The output is copied and pasted in `ndown-nright-6_out-factor.txt` which will now be included in latex.
+The output is copied and pasted in `ndown-nright-6_out-factor.txt` which will now be included in latex. We do not need to do more here as the results are very easy to copy in latex.
+
 
 ### ndown-nleft-6_out.txt
 This run took 4minutes, so we will run it locally to run the factor function.
 The output is copied and pasted in `ndown-nleft-6_out-factor.txt` which will now be included in latex.
+
+We will use the file `text_convert.jl` created by Bella Wu [original repo](https://github.com/solislemuslab/phylo-invariants/blob/master/scripts/julia/text_convert.jl) to use the `macaulay_latex`function.
+
+To use this function, we need to change `gz` to `z4`:
+```shell
+sed 's/gz/z4/g' ndown-nleft-6_out-factor.txt > ndown-nleft-6_out-factor_gz-replaced.txt
+```
+
+Then we run the code in `text_convert.jl` for every invariant and copy it in latex. I had to check one by one as a couple of exponents were missing, but most was correct.
+Note that we also have to change z4 to gamma.
 
 ### ndown-nup-6_out.txt
 This run took 3hr, and we will run it locally to run the factor function.
