@@ -4,6 +4,25 @@
 # October 2022
 
 
+# Claudia: calculate the degree of the polynomials
+# str: line of the exponents
+function polynomialDegree(exp)
+    exp2 = replace(exp, " "=> "-")
+    exp3 = split(exp2, "--------------")
+    deleteat!(exp3, findall(x->x=="",exp3))
+
+    mx = 0
+    for e in exp3
+        tmp = split(e,'-')
+        deleteat!(tmp, findall(x->x=="",tmp))
+        s = sum(parse.(Int,tmp))
+        if s>mx
+            mx = s
+        end
+    end
+    return mx
+end
+
 
 """
     input:  a list of invariants separated by comma (eg. "a22 + 2a24 - 1, a8 - a9, a7 + 2a9 - 1")
@@ -75,6 +94,8 @@ function macaulay_latex(str, exp)
         j = 0 #store index in str
         for i in 1:length(exp)
             j += 1
+            @show i
+            @show j
             if exp[i] != ' ' && str[j] == ' ' && str[j+1] != 'z'
                 str=str[1:j-1]*'^'*exp[i]*str[j+1:end]
                 j+=1

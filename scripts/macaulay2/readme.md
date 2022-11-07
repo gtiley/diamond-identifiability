@@ -433,3 +433,12 @@ Note that we also have to change z4 to gamma.
 This run took 3hr, and we will run it locally to run the factor function.
 The output is copied and pasted in `ndown-nup-6_out-factor.txt` which will now be included in latex.
 
+We will use the file `text_convert.jl` created by Bella Wu [original repo](https://github.com/solislemuslab/phylo-invariants/blob/master/scripts/julia/text_convert.jl) to use the `macaulay_latex`function.
+
+To use this function, we need to change `gz` to `z4`:
+```shell
+sed 's/gz/z4/g' ndown-nup-6_out-factor.txt > ndown-nup-6_out-factor_gz-replaced.txt
+```
+
+We had to do something different here as the parser from Bella could not get the last large polynomial. So, not I copy by hand the first part of the invariants (the easy part), and then get the degree of the polynomial with `polynomialDegree`.
+Also, we noticed that all the 12 invariants are the same in (z1)(z13 - 1)(z3)(z4)(z4 - 1) times a 10-degree polynomial
