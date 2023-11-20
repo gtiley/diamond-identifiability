@@ -1,0 +1,3 @@
+tree ((C,(A,B)t:0.01)s:0.02,((G,H)x:0.01,E)v:0.02)r:0.03;
+hybridization v x, s t as j k tau=yes, yes phi=0.5
+
