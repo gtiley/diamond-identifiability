@@ -25,4 +25,5 @@ processNetworks.phylonet.pl - Generates summary statistics from PhyloNet results
 processNetworks.snaq.extra.pl - Generates summary statistics from SNaQ results across simulation replicates of gene trees with error.
 processNetworks.snaq.pl - Generates summary statistics from SNaQ results across simulation replicates of true gene trees.
 
-
+## spMaps
+These are text files that map alleles to species for SNaQ. It is possible for a species to be represented by more than a single sequence, but since our similations only had one representative for species, for example *a1*, the SNaQ output will use the species label for that species, such as *A*. There are nine mapping files since different diamonds used for simulation have different sampling.

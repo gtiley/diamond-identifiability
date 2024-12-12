@@ -1,0 +1,7 @@
+allele,species
+a1,A
+c1,C
+d1,D
+e1,E
+f1,F
+g1,G
