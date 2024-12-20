@@ -1,0 +1,9 @@
+Method	nTrees	xPos	FoundOneEdge	CorrectNetwork	HasHybridEdge
+SNaQ	100	0.9	100	73	94
+SNaQ	500	1.9	100	100	100
+SNaQ	1000	2.9	100	100	100
+SNaQ	5000	3.9	100	100	100
+InferNetwork_MPL	100	1.1	74	30	96
+InferNetwork_MPL	500	2.1	75	22	100
+InferNetwork_MPL	1000	3.1	75	17	100
+InferNetwork_MPL	5000	4.1	54	17	100
