@@ -1,21 +1,19 @@
 # Extracting diamonds: Identifiability of 4-node cycles in level-1 phylogenetic networks under a pseudolikelihood coalescent model
 
-George Tiley, Claudia Solis-Lemus
+George Tiley, Nan Liu, Claudia Solis-Lemus
 
 ## Citation
 
-This repository contains the scripts for the [Tiley and Solis-Lemus, 2023](https://www.biorxiv.org/content/10.1101/2023.10.25.564087v1) manuscript:
+This repository contains the scripts for the [Tiley et al, 2025](https://academic.oup.com/evolinnean/advance-article/doi/10.1093/evolinnean/kzaf019/8257700) manuscript:
 
 ```
-@ARTICLE{Tiley2023-wn,
-  title    = "Extracting diamonds: Identifiability of 4-node cycles in level-1
-              phylogenetic networks under a pseudolikelihood coalescent model",
-  author   = "Tiley, George and Sol{\'\i}s-Lemus, Claudia",
-  journal  = "bioRxiv",
-  pages    = "2023.10.25.564087",
-  month    =  oct,
-  year     =  2023,
-  language = "en"
+@article{tiley2025extracting,
+  title={Extracting Diamonds: Identifiability of 4-node Cycles in level-1 Phylogenetic Network},
+  author={Tiley, George and Liu, Nan and Sol{\'\i}s-Lemus, Claudia},
+  journal={Evolutionary Journal of the Linnean Society},
+  pages={kzaf019},
+  year={2025},
+  publisher={Oxford University Press}
 }
 ```
 
