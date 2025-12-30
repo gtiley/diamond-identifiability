@@ -1,0 +1,7 @@
+#NEXUS
+BEGIN TREES;
+	UTREE 1 = (C: 0.036309, (((A: 0.011876, B: 0.011876)t[&height_95%_HPD={0.00963900, 0.01406800}]: 0.000708, ghost_k :0.012584)k[&height_95%_HPD={0.01023100, 0.01491300}]: 0.013993, ((k :0.016782, (G: 0.010655, H: 0.010655)x[&height_95%_HPD={0.00813900, 0.01301800}]: 0.006126)j[&height_95%_HPD={0.01210200, 0.02076500}]: 0.005984, E: 0.022766)v[&height_95%_HPD={0.02029600, 0.02522100}]: 0.003812)s[&height_95%_HPD={0.02133800, 0.03527600}]: 0.009731)r[&height_95%_HPD={0.02878800, 0.04301500}];
+END;
+
+[Species tree with tau as branch lengths and theta as labels, for FigTree.
+In FigTree, choose 95%HPD for Node Bars and label for Node Labels]

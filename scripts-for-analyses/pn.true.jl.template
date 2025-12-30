@@ -15,19 +15,28 @@ addprocs(3)
 #d8 T_sp = readTopology("((A,B),(C,D),(E,G));")
 #d9 T_sp = readTopology("(A,(C,D),((E,F),G));")
 
-genetrees = readMultiTopology("/data/users_area/gti10kg/badDiamond/__ROOTING__/simulationResults/__DIAMOND__/__NLOCI__/__I__/trees/__I__.trees")
+diamond = "__DIAMOND__"
+phi = "__PHI__"
+nloci = "__NLOCI__"
+length = "__LENGTH__"
+
+genetree_path = string("../../../../simulationResults/","__DIAMOND__","/","__PHI__","_","__NLOCI__","_","__LENGTH__","/__I__/trees/",nloci,".trees")
+genetrees = readMultiTopology(genetree_path)
 
 df_ind = writeTableCF(countquartetsintrees(genetrees)...)
-CSV.write("__I__.true.tableCF_individuals.csv", df_ind)
-#d1 df_sp = mapAllelesCFtable("/data/users_area/gti10kg/badDiamond/spMaps/namemap.d1.txt", "__I__.true.tableCF_individuals.csv");
-#d2 df_sp = mapAllelesCFtable("/data/users_area/gti10kg/badDiamond/spMaps/namemap.d2.txt", "__I__.true.tableCF_individuals.csv");
-#d3 df_sp = mapAllelesCFtable("/data/users_area/gti10kg/badDiamond/spMaps/namemap.d3.txt", "__I__.true.tableCF_individuals.csv");
-#d4 df_sp = mapAllelesCFtable("/data/users_area/gti10kg/badDiamond/spMaps/namemap.d4.txt", "__I__.true.tableCF_individuals.csv");
-#d5 df_sp = mapAllelesCFtable("/data/users_area/gti10kg/badDiamond/spMaps/namemap.d5.txt", "__I__.true.tableCF_individuals.csv");
-#d6 df_sp = mapAllelesCFtable("/data/users_area/gti10kg/badDiamond/spMaps/namemap.d6.txt", "__I__.true.tableCF_individuals.csv");
-#d7 df_sp = mapAllelesCFtable("/data/users_area/gti10kg/badDiamond/spMaps/namemap.d7.txt", "__I__.true.tableCF_individuals.csv");
-#d8 df_sp = mapAllelesCFtable("/data/users_area/gti10kg/badDiamond/spMaps/namemap.d8.txt", "__I__.true.tableCF_individuals.csv");
-#d9 df_sp = mapAllelesCFtable("/data/users_area/gti10kg/badDiamond/spMaps/namemap.d9.txt", "__I__.true.tableCF_individuals.csv");
+df_ind = readTableCF!(df_ind)
+df_ind_table = writeTableCF(df_ind)
+CSV.write("__I__.true.tableCF_individuals.csv", df_ind_table)
+#d1 df_sp = mapAllelesCFtable("../../../../spMaps/namemap.d1.txt", "__I__.true.tableCF_individuals.csv");
+#d2 df_sp = mapAllelesCFtable("../../../../spMaps/namemap.d2.txt", "__I__.true.tableCF_individuals.csv");
+#d3 df_sp = mapAllelesCFtable("../../../../spMaps/namemap.d3.txt", "__I__.true.tableCF_individuals.csv");
+#d4 df_sp = mapAllelesCFtable("../../../../spMaps/namemap.d4.txt", "__I__.true.tableCF_individuals.csv");
+#d5 df_sp = mapAllelesCFtable("../../../../spMaps/namemap.d5.txt", "__I__.true.tableCF_individuals.csv");
+#d6 df_sp = mapAllelesCFtable("../../../../spMaps/namemap.d6.txt", "__I__.true.tableCF_individuals.csv");
+#d7 df_sp = mapAllelesCFtable("../../../../spMaps/namemap.d7.txt", "__I__.true.tableCF_individuals.csv");
+#d8 df_sp = mapAllelesCFtable("../../../../spMaps/namemap.d8.txt", "__I__.true.tableCF_individuals.csv");
+#d9 df_sp = mapAllelesCFtable("../../../../spMaps/namemap.d9.txt", "__I__.true.tableCF_individuals.csv");
+
 d_sp = readTableCF!(df_sp);
 df_sp = writeTableCF(d_sp);
 CSV.write("__I__.true.CFtable_species.csv", df_sp)
